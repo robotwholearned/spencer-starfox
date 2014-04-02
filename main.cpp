@@ -132,10 +132,10 @@ int moveOption(int currentRoom, string option)
 	{
 		if (option == "w")
 			return HALLA;
-		else
-			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-		cin>>option;}
-		
+		else{
+			cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+			cin>>option;
+		}
 	}
 	while (currentRoom == HALLA)
 	{
@@ -143,10 +143,10 @@ int moveOption(int currentRoom, string option)
 			return HANGER;
 		else if (option == "n")
 			return HALLA1;
-		else
-			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-		cin>>option;}
-		
+		else{
+			cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+			cin>>option;
+		}
 	}
 	while (currentRoom == HALLA1)
 	{
@@ -158,55 +158,45 @@ int moveOption(int currentRoom, string option)
 			return KRYSDOOR;
 		else if (option == "w")
 			return FOXDOOR;
-		else 
-			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-		cin>>option;}
+		else{
+			cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+			cin>>option;
+		}
 	}
-	while (currentRoom == BRIDGE)
-		{if (option == "s")
-	return HALLA1;
-	else 
-		{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	cin>>option;}
+	while (currentRoom == BRIDGE) 
+	{
+		if (option == "s") 
+			return HALLA1; 
+		else{
+			cout<<"Sorry, that'a an invalid option. \n\n Try again: "; 
+			cin>>option; 
+		} 
+	} 
+	while (currentRoom == FOXDOOR) 
+	{
+		if (option == "e") 
+			return HALLA1; 
+		else {
+			cout<<"Sorry, that'a an invalid option. \n\n Try again: "; 
+			cin>>option;
+		}
+	} 
+	while (currentRoom == KRYSDOOR) 
+	{
+		if (option == "w") 
+			return HALLA1; 
+		else{
+			cout<<"Sorry, that'a an invalid option. \n\n Try again: "; 
+			cin>>option;
+		} 
+	} 
+	return -1; 
 }
-while (currentRoom == FOXDOOR)
-{
-	if (option == "e")
-		return HALLA1;
-	else
-		{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	cin>>option;}
-}
-while (currentRoom == KRYSDOOR)
-{
-	if (option == "w")
-		return HALLA1;
-	else
-		{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	cin>>option;}
-}
-return -1;
-}
-void startConversation()
-{
-	int currentRoom = checkRoom(currentRoom);
-}
-int checkRoom(int currentRoom)
-{
-	return currentRoom;
-}
-void hangerDescription()
-{
-	cout<<"\nYou're standing in the hanger of the GreatFox. Metal walls surround you.\n There are four advanced fighter jets sitting little bit away.\n There is a door to your left, leading deeper into the ship.\n (West)";
-}
-void hallADescription()
-{
-	cout<<"You are now standing in a long hallway, there are doors lining the hall,\n each with diffrent names printed on them.\nThe entrance to the hanger is behind you. \n(North, East)";
-}
-void hallA1Description()
-{
-	cout<<"You move down the hall passing by doors on your left and right.\n(South, North, East, West)";
-}
+void startConversation() {int currentRoom = checkRoom(currentRoom); }
+int checkRoom(int currentRoom) {return currentRoom; }
+void hangerDescription() {cout<<"\nYou're standing in the hanger of the GreatFox. Metal walls surround you.\n There are four advanced fighter jets sitting little bit away.\n There is a door to your left, leading deeper into the ship.\n (West)"; } 
+void hallADescription() {cout<<"You are now standing in a long hallway, there are doors lining the hall,\n each with diffrent names printed on them.\nThe entrance to the hanger is behind you. \n(North, East)"; }
+void hallA1Description() {cout<<"You move down the hall passing by doors on your left and right.\n(South, North, East, West)"; }
 void bridgeDescription()
 {
 	crewMember Krystal;
@@ -219,11 +209,5 @@ void bridgeDescription()
 	else
 		cout<<"You are on the bridge.\n(South)";
 }
-void krysDoorDescription()
-{
-	cout<<"You're now standing infront of a door labeled 'Krystal'\n (West)";
-}
-void foxDoorDescription()
-{
-	cout<<"You're now standing infront of a door labeled 'Fox'\n(East)";
-}
+void krysDoorDescription() {cout<<"You're now standing infront of a door labeled 'Krystal'\n (West)"; }
+void foxDoorDescription() {cout<<"You're now standing infront of a door labeled 'Fox'\n (East)"; }
