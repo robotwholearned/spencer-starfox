@@ -239,7 +239,7 @@ void bridgeDescription()
 	crewMember Krystal;
 	Krystal.assignName("Krystal");
 	Krystal.currentRoom = 4;
-	if (Krystal.currentRoom = 4)
+	if (Krystal.currentRoom == 4)
 	{
 		cout<<"You see a beautiful blue fox standing on the bridge.\n(Talk, South)";
 	}
