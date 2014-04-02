@@ -185,6 +185,7 @@ int moveOption(int currentRoom, string option)
 			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
 	  cin>>option;}
 	}
+	return -1;
 }
 void startConversation()
 {
