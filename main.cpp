@@ -64,7 +64,7 @@ int main()
 		roomDescription(currentRoom);
 		cin>>option;
 		if (option == "w" || option == "e" || option == "n" || option == "s")
-		{currentRoom = changeRooms(option, currentRoom);}
+			{currentRoom = changeRooms(option, currentRoom);}
 		if (option == "talk")
 			startConversation();
 		if (option == "room")
@@ -130,12 +130,12 @@ int moveOption(int currentRoom, string option)
 {
 	while (currentRoom == HANGER)
 	{
-	  if (option == "w")
-		  return HALLA;
-	  else
-	  {cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	  cin>>option;}
-	    
+		if (option == "w")
+			return HALLA;
+		else
+			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+		cin>>option;}
+		
 	}
 	while (currentRoom == HALLA)
 	{
@@ -144,8 +144,8 @@ int moveOption(int currentRoom, string option)
 		else if (option == "n")
 			return HALLA1;
 		else
-	  {cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	  cin>>option;}
+			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+		cin>>option;}
 		
 	}
 	while (currentRoom == HALLA1)
@@ -160,32 +160,32 @@ int moveOption(int currentRoom, string option)
 			return FOXDOOR;
 		else 
 			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	  cin>>option;}
+		cin>>option;}
 	}
 	while (currentRoom == BRIDGE)
 		{if (option == "s")
-			return HALLA1;
-		else 
-			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	  cin>>option;}
-	}
-	while (currentRoom == FOXDOOR)
-	{
-		if (option == "e")
-			return HALLA1;
-		else
-			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	  cin>>option;}
-	}
-	while (currentRoom == KRYSDOOR)
-	{
-		if (option == "w")
-			return HALLA1;
-		else
-			{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
-	  cin>>option;}
-	}
-	return -1;
+	return HALLA1;
+	else 
+		{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+	cin>>option;}
+}
+while (currentRoom == FOXDOOR)
+{
+	if (option == "e")
+		return HALLA1;
+	else
+		{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+	cin>>option;}
+}
+while (currentRoom == KRYSDOOR)
+{
+	if (option == "w")
+		return HALLA1;
+	else
+		{cout<<"Sorry, that'a an invalid option. \n\n Try again: ";
+	cin>>option;}
+}
+return -1;
 }
 void startConversation()
 {
