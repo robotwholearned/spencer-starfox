@@ -26,7 +26,7 @@ void crewMember::talkTo()
 }
 void crewMember::assignName(string crewName)
 {
-	crewMember.name = crewName;
+	name = crewName;
 }
 
 void welcomePlayer();
