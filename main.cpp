@@ -123,36 +123,8 @@ void roomDescription(int currentRoom)
 }
 int changeRooms(string option, int currentRoom)
 {
-	if (currentRoom == HANGER)
-	{
-		int choice = moveOption(HANGER, option);
-		return choice;
-	}
-	if (currentRoom == HALLA)
-	{
-		int choice = moveOption(HALLA, option);
-		return choice;
-	}
-	if (currentRoom == HALLA1)
-	{
-		int choice = moveOption(HALLA1, option);
-		return choice;
-	}
-	if (currentRoom == BRIDGE)
-	{
-		int choice = moveOption(BRIDGE, option);
-		return choice;
-	}
-	if (currentRoom == FOXDOOR)
-	{
-		int choice = moveOption(FOXDOOR, option);
-		return choice;
-	}
-	if (currentRoom == KRYSDOOR)
-	{
-		int choice = moveOption(KRYSDOOR, option);
-		return choice;
-	}
+	int choice = moveOption(currentRoom, option);
+	return choice;
 }
 int moveOption(int currentRoom, string option)
 {
