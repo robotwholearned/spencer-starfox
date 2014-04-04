@@ -49,6 +49,7 @@ int const HALLA1 = 3;
 int const BRIDGE = 4;
 int const KRYSDOOR = 5;
 int const FOXDOOR = 6;
+int const BUTTS = 6;
 int main()
 {
 	int currentRoom = HANGER;
